@@ -53,6 +53,49 @@ jobs:
           false;
           echo "ok";
 
+  cegit:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+        run: |
+          false;
+          echo "ok";
+
+  ecegit:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+        run: |
+          set -e
+          false;
+          echo "ok";
+
+  cgit:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -o pipefail {0}
+        run: |
+          false;
+          echo "ok";
+
+  ecgit:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -o pipefail {0}
+        run: |
+          set -e
+          false;
+          echo "ok";
+
+
   cebash:
     runs-on: windows-latest
     steps:
