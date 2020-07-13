@@ -14,7 +14,6 @@ jobs:
       - name: CI-Build
         shell: msys2 {0}
         run: |
-          set -e
           false;
           echo "ok";
 
@@ -29,6 +28,7 @@ jobs:
       - name: CI-Build
         shell: msys2 {0}
         run: |
+          set -e
           false;
           echo "ok";
 
