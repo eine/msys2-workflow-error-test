@@ -18,7 +18,31 @@ jobs:
           false;
           echo "ok";
 
+  emsys2:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: msys2/setup-msys2@v1
+        with:
+          msystem: MINGW64
+          update: true
+      - name: CI-Build
+        shell: msys2 {0}
+        run: |
+          false;
+          echo "ok";
+
   bash:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: bash
+        run: |
+          false;
+          echo "ok";
+
+  ebash:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -36,11 +60,31 @@ jobs:
       - name: CI-Build
         shell: bash --norc -ilceo pipefail {0}
         run: |
+          false;
+          echo "ok";
+
+  ecebash:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: bash --norc -ilceo pipefail {0}
+        run: |
           set -e
           false;
           echo "ok";
 
   cbash:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: bash --norc -ilco pipefail {0}
+        run: |
+          false;
+          echo "ok";
+
+  ecbash:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
