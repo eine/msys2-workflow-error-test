@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: CI-Build
-        shell: bash --norc -ilceo pipefail
+        shell: bash --norc -ilceo pipefail {0}
         run: |
           set -e
           false;
@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: CI-Build
-        shell: bash --norc -ilco pipefail
+        shell: bash --norc -ilco pipefail {0}
         run: |
           set -e
           false;
