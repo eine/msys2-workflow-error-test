@@ -2,6 +2,7 @@ name: errorhandling
 on: [push, pull_request]
 
 jobs:
+
   msys2:
     runs-on: windows-latest
     steps:
