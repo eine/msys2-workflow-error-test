@@ -11,7 +11,7 @@ jobs:
           msystem: MINGW64
           update: true
       - name: CI-Build
-        shell: msys2 {0}
+        shell: msys2
         run: |
           false;
           echo "ok";
@@ -25,7 +25,7 @@ jobs:
           msystem: MINGW64
           update: true
       - name: CI-Build
-        shell: msys2 {0}
+        shell: msys2
         run: |
           deafewafesfsafeafeff | echo "a";
           echo "ok";
