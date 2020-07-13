@@ -16,20 +16,6 @@ jobs:
           false;
           echo "ok";
 
-  msys2-e:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: msys2/setup-msys2@v1
-        with:
-          msystem: MINGW64
-          update: true
-      - name: CI-Build
-        shell: msys2 -e {0}
-        run: |
-          false;
-          echo "ok";
-
   bash:
     runs-on: ubuntu-latest
     steps:
