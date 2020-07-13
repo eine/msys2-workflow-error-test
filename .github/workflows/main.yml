@@ -19,6 +19,39 @@ jobs:
           echo "ok";
 
   bash:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: bash
+        run: |
+          set -e
+          false;
+          echo "ok";
+
+  cebash:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: bash --norc -ilceo pipefail
+        run: |
+          set -e
+          false;
+          echo "ok";
+
+  cbash:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CI-Build
+        shell: bash --norc -ilco pipefail
+        run: |
+          set -e
+          false;
+          echo "ok";
+
+  bash:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
